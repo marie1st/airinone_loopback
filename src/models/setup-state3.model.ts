@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import {Entity, model, property, hasMany} from '@loopback/repository';
 import {OrderProduct} from './order-product.model';
-=======
-import {Entity, model, property} from '@loopback/repository';
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class SetupState3 extends Entity {
@@ -38,11 +34,8 @@ export class SetupState3 extends Entity {
   })
   order_id: string;
 
-<<<<<<< HEAD
   @hasMany(() => OrderProduct, {keyTo: 'order_id'})
   orderProducts: OrderProduct[];
-=======
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<SetupState3>) {
     super(data);

@@ -4,7 +4,6 @@ import {
   Filter,
   FilterExcludingWhere,
   repository,
-<<<<<<< HEAD
   Where
 } from '@loopback/repository';
 import {
@@ -20,19 +19,6 @@ import {
   put,
 
   requestBody
-=======
-  Where,
-} from '@loopback/repository';
-import {
-  post,
-  param,
-  get,
-  getModelSchemaRef,
-  patch,
-  put,
-  del,
-  requestBody,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 } from '@loopback/rest';
 import {PromotionalProductsGiveaway} from '../models';
 import {PromotionalProductsGiveawayRepository} from '../repositories';
@@ -57,11 +43,7 @@ export class PromotionalProductsGiveawayController {
         'application/json': {
           schema: getModelSchemaRef(PromotionalProductsGiveaway, {
             title: 'NewPromotionalProductsGiveaway',
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
           }),
         },
       },
@@ -141,11 +123,7 @@ export class PromotionalProductsGiveawayController {
     },
   })
   async findById(
-<<<<<<< HEAD
     @param.path.string('id') id: number,
-=======
-    @param.path.string('id') id: string,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     @param.filter(PromotionalProductsGiveaway, {exclude: 'where'}) filter?: FilterExcludingWhere<PromotionalProductsGiveaway>
   ): Promise<PromotionalProductsGiveaway> {
     return this.promotionalProductsGiveawayRepository.findById(id, filter);
@@ -159,11 +137,7 @@ export class PromotionalProductsGiveawayController {
     },
   })
   async updateById(
-<<<<<<< HEAD
     @param.path.string('id') id: number,
-=======
-    @param.path.string('id') id: string,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     @requestBody({
       content: {
         'application/json': {
@@ -184,11 +158,7 @@ export class PromotionalProductsGiveawayController {
     },
   })
   async replaceById(
-<<<<<<< HEAD
     @param.path.string('id') id: number,
-=======
-    @param.path.string('id') id: string,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     @requestBody() promotionalProductsGiveaway: PromotionalProductsGiveaway,
   ): Promise<void> {
     await this.promotionalProductsGiveawayRepository.replaceById(id, promotionalProductsGiveaway);
@@ -201,11 +171,7 @@ export class PromotionalProductsGiveawayController {
       },
     },
   })
-<<<<<<< HEAD
   async deleteById(@param.path.string('id') id: number): Promise<void> {
-=======
-  async deleteById(@param.path.string('id') id: string): Promise<void> {
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     await this.promotionalProductsGiveawayRepository.deleteById(id);
   }
 }

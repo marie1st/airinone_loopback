@@ -3,19 +3,11 @@ import {Entity, model, property} from '@loopback/repository';
 @model()
 export class Warehouse extends Entity {
   @property({
-<<<<<<< HEAD
     type: 'number',
     id: true,
     generated: true,
   })
   id?: number;
-=======
-    type: 'string',
-    id: true,
-    generated: true,
-  })
-  id?: string;
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   @property({
     type: 'string',

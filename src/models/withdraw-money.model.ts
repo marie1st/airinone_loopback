@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {OrderProduct} from './order-product.model';
 
@@ -12,19 +11,6 @@ export class WithdrawMoney extends Entity {
     required: true,
   })
   id: Number;
-=======
-import {Entity, model, property} from '@loopback/repository';
-
-@model()
-export class WithdrawMoney extends Entity {
-  @property({
-    type: 'string',
-    id: true,
-    generated: false,
-    required: true,
-  })
-  order_id: string;
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   @property({
     type: 'string',
@@ -44,11 +30,8 @@ export class WithdrawMoney extends Entity {
   })
   is_approved: boolean;
 
-<<<<<<< HEAD
   @belongsTo(() => OrderProduct, {name: 'OrderProduct'})
   order_id: string;
-=======
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<WithdrawMoney>) {
     super(data);

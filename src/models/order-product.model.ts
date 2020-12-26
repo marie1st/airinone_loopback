@@ -1,9 +1,19 @@
-<<<<<<< HEAD
-import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property, hasMany, hasOne} from '@loopback/repository';
 import {Customer} from './customer.model';
-=======
-import {Entity, model, property} from '@loopback/repository';
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
+import {WithdrawUsedEquipment} from './withdraw-used-equipment.model';
+import {WithdrawMechanicalEquipment} from './withdraw-mechanical-equipment.model';
+import {WithdrawMoney} from './withdraw-money.model';
+import {EmployeeWorking} from './employee-working.model';
+import {SetupProcessPic} from './setup-process-pic.model';
+import {SetupCost} from './setup-cost.model';
+import {SetupFrabicProtect} from './setup-frabic-protect.model';
+import {SetupFcu} from './setup-fcu.model';
+import {SetupPipe} from './setup-pipe.model';
+import {SetupCdu} from './setup-cdu.model';
+import {PipeSysNElec} from './pipe-sys-n-elec.model';
+import {LeakTest} from './leak-test.model';
+import {VacummTest} from './vacumm-test.model';
+import {AddLiquid} from './add-liquid.model';
 
 @model()
 export class OrderProduct extends Entity {
@@ -50,16 +60,6 @@ export class OrderProduct extends Entity {
     required: true,
   })
   model: string;
-<<<<<<< HEAD
-=======
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  order_by: string;
-
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   @property({
     type: 'date',
     required: true,
@@ -101,12 +101,50 @@ export class OrderProduct extends Entity {
   })
   created_at?: string;
 
-<<<<<<< HEAD
   @belongsTo(() => Customer, {name: 'id'})
   order_by: string;
 
-=======
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
+  @hasMany(() => WithdrawUsedEquipment, {keyTo: 'order_id'})
+  withdrawUsedEquipments: WithdrawUsedEquipment[];
+
+  @hasMany(() => WithdrawMechanicalEquipment, {keyTo: 'order_id'})
+  withdrawMechanicalEquipments: WithdrawMechanicalEquipment[];
+
+  @hasOne(() => WithdrawMoney, {keyTo: 'order_id'})
+  withdrawMoney: WithdrawMoney;
+
+  @hasOne(() => EmployeeWorking, {keyTo: 'order_id'})
+  employeeWorking: EmployeeWorking;
+
+  @hasOne(() => SetupProcessPic, {keyTo: 'order_id'})
+  setupProcessPic: SetupProcessPic;
+
+  @hasOne(() => SetupCost, {keyTo: 'order_id'})
+  setupCost: SetupCost;
+
+  @hasOne(() => SetupFrabicProtect, {keyTo: 'order_id'})
+  setupFrabicProtect: SetupFrabicProtect;
+
+  @hasOne(() => SetupFcu, {keyTo: 'order_id'})
+  setupFcu: SetupFcu;
+
+  @hasOne(() => SetupPipe, {keyTo: 'order_id'})
+  setupPipe: SetupPipe;
+
+  @hasOne(() => SetupCdu, {keyTo: 'order_id'})
+  setupCdu: SetupCdu;
+
+  @hasOne(() => PipeSysNElec, {keyTo: 'order_id'})
+  pipeSysNElec: PipeSysNElec;
+
+  @hasOne(() => LeakTest, {keyTo: 'order_id'})
+  leakTest: LeakTest;
+
+  @hasOne(() => VacummTest, {keyTo: 'order_id'})
+  vacummTest: VacummTest;
+
+  @hasOne(() => AddLiquid, {keyTo: 'order_id'})
+  addLiquid: AddLiquid;
 
   constructor(data?: Partial<OrderProduct>) {
     super(data);

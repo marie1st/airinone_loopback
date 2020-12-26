@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import {Entity, model, property, hasOne, belongsTo} from '@loopback/repository';
 import {EmergencyContact} from './emergency-contact.model';
 import {Education} from './education.model';
 import {Department} from './department.model';
 import {Role} from './role.model';
 import {Employment} from './employment.model';
-=======
-import {Entity, model, property} from '@loopback/repository';
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class Employee extends Entity {
@@ -28,18 +24,6 @@ export class Employee extends Entity {
     required: true,
   })
   phone_number: string;
-<<<<<<< HEAD
-=======
-
-  @property({
-    type: 'string',
-    id: true,
-    generated: false,
-    required: true,
-  })
-  employee_id: string;
-
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   @property({
     type: 'string',
   })
@@ -111,26 +95,6 @@ export class Employee extends Entity {
   })
   postcode?: string;
 
-<<<<<<< HEAD
-=======
-  @property({
-    type: 'string',
-    required: true,
-  })
-  department_id: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  role_id: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  employement_id: string;
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   @property({
     type: 'date',
@@ -154,7 +118,6 @@ export class Employee extends Entity {
   })
   created_at?: string;
 
-<<<<<<< HEAD
   @property({
     type: 'string',
     id: true,
@@ -180,8 +143,6 @@ export class Employee extends Entity {
 
   @belongsTo(() => Employment, {name: 'Employment'})
   employement_id: number;
-=======
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<Employee>) {
     super(data);

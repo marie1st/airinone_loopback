@@ -123,11 +123,7 @@ export class PromotionalProductsPriceController {
     },
   })
   async findById(
-<<<<<<< HEAD
     @param.path.number('id') id: number,
-=======
-    @param.path.number('id') id: string,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     @param.filter(PromotionalProductsPrice, {exclude: 'where'}) filter?: FilterExcludingWhere<PromotionalProductsPrice>
   ): Promise<PromotionalProductsPrice> {
     return this.promotionalProductsPriceRepository.findById(id, filter);
@@ -141,11 +137,7 @@ export class PromotionalProductsPriceController {
     },
   })
   async updateById(
-<<<<<<< HEAD
     @param.path.number('id') id: number,
-=======
-    @param.path.number('id') id: string,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     @requestBody({
       content: {
         'application/json': {
@@ -166,11 +158,7 @@ export class PromotionalProductsPriceController {
     },
   })
   async replaceById(
-<<<<<<< HEAD
     @param.path.number('id') id: number,
-=======
-    @param.path.number('id') id: string,
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     @requestBody() promotionalProductsPrice: PromotionalProductsPrice,
   ): Promise<void> {
     await this.promotionalProductsPriceRepository.replaceById(id, promotionalProductsPrice);
@@ -183,11 +171,7 @@ export class PromotionalProductsPriceController {
       },
     },
   })
-<<<<<<< HEAD
   async deleteById(@param.path.number('id') id: number): Promise<void> {
-=======
-  async deleteById(@param.path.number('id') id: string): Promise<void> {
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
     await this.promotionalProductsPriceRepository.deleteById(id);
   }
 }

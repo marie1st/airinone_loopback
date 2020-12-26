@@ -33,7 +33,4 @@ export * from './product-n-price.model';
 export * from './promotional-products-percent.model';
 export * from './promotional-products-price.model';
 export * from './promotional-products-giveaway.model';
-<<<<<<< HEAD
 export * from './setup-process.model';
-=======
->>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
