@@ -31,6 +31,9 @@ export * from './premium-setup-cost.repository';
 export * from './promotional-products-percent.repository';
 export * from './promotional-products-price.repository';
 export * from './promotional-products-giveaway.repository';
+<<<<<<< HEAD
 export * from './employment.repository';
 export * from './setup-process.repository';
 export * from './product-n-price.repository';
+=======
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe

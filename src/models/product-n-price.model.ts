@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import {Entity, model, property, belongsTo} from '@loopback/repository';
 import {Wage} from './wage.model';
 import {ItemPrice} from './item-price.model';
 import {PremiumSetupCost} from './premium-setup-cost.model';
+=======
+import {Entity, model, property} from '@loopback/repository';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class ProductNPrice extends Entity {
@@ -41,11 +45,37 @@ export class ProductNPrice extends Entity {
     required: true,
   })
   promotion_id: number;
+<<<<<<< HEAD
+=======
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  premium_setup_id: number;
+
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   @property({
     type: 'number',
     required: true,
   })
   cost: number;
+<<<<<<< HEAD
+=======
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  wage_id: number;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  item_price_id: number;
+
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   @property({
     type: 'number',
     required: true,
@@ -70,6 +100,7 @@ export class ProductNPrice extends Entity {
   })
   profit_percent: number;
 
+<<<<<<< HEAD
   @belongsTo(() => Wage, {name: 'Wage'})
   wage_id: number;
 
@@ -78,6 +109,8 @@ export class ProductNPrice extends Entity {
 
   @belongsTo(() => PremiumSetupCost, {name: 'PremiiumSetupCost'})
   premium_setup_id: number;
+=======
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<ProductNPrice>) {
     super(data);

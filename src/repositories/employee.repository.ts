@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {inject, Getter} from '@loopback/core';
 import {DefaultCrudRepository, repository, HasOneRepositoryFactory, BelongsToAccessor} from '@loopback/repository';
 import {AirinoneDataSource} from '../datasources';
@@ -7,12 +8,19 @@ import {EducationRepository} from './education.repository';
 import {DepartmentRepository} from './department.repository';
 import {RoleRepository} from './role.repository';
 import {EmploymentRepository} from './employment.repository';
+=======
+import {inject} from '@loopback/core';
+import {DefaultCrudRepository} from '@loopback/repository';
+import {AirinoneDataSource} from '../datasources';
+import {Employee, EmployeeRelations} from '../models';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 export class EmployeeRepository extends DefaultCrudRepository<
   Employee,
   typeof Employee.prototype.employee_id,
   EmployeeRelations
 > {
+<<<<<<< HEAD
 
   public readonly emergencyContact: HasOneRepositoryFactory<EmergencyContact, typeof Employee.prototype.employee_id>;
 
@@ -42,5 +50,11 @@ export class EmployeeRepository extends DefaultCrudRepository<
     this.registerInclusionResolver('education', this.education.inclusionResolver);
     this.emergencyContact = this.createHasOneRepositoryFactoryFor('emergencyContact', emergencyContactRepositoryGetter);
     this.registerInclusionResolver('emergencyContact', this.emergencyContact.inclusionResolver);
+=======
+  constructor(
+    @inject('datasources.db') dataSource: AirinoneDataSource,
+  ) {
+    super(Employee, dataSource);
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   }
 }

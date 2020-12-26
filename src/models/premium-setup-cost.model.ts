@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import {Entity, model, property, hasOne} from '@loopback/repository';
 import {ProductNPrice} from './product-n-price.model';
+=======
+import {Entity, model, property} from '@loopback/repository';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class PremiumSetupCost extends Entity {
@@ -40,8 +44,11 @@ export class PremiumSetupCost extends Entity {
   })
   description: string;
 
+<<<<<<< HEAD
   @hasOne(() => ProductNPrice, {keyTo: 'premium_setup_id'})
   productNPrice: ProductNPrice;
+=======
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<PremiumSetupCost>) {
     super(data);

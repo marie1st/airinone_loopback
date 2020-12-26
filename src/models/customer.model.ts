@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 import {Entity, hasMany, model, property} from '@loopback/repository';
 import {OrderProduct} from './order-product.model';
+=======
+import {Entity, model, property} from '@loopback/repository';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class Customer extends Entity {
   @property({
     type: 'string',
     id: true,
+<<<<<<< HEAD
     generated: false,
     required: true,
   })
   id: string;
+=======
+    generated: true,
+  })
+  id?: string;
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   @property({
     type: 'string',
@@ -57,9 +67,14 @@ export class Customer extends Entity {
 
   @property({
     type: 'string',
+<<<<<<< HEAD
     required: true,
   })
   id_card_pic: string;
+=======
+  })
+  id_card_pic?: string;
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   @property({
     type: 'string',
@@ -102,8 +117,11 @@ export class Customer extends Entity {
   })
   created_at?: string;
 
+<<<<<<< HEAD
   @hasMany(() => OrderProduct, {keyTo: 'order_by'})
   orderProducts: OrderProduct[];
+=======
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<Customer>) {
     super(data);

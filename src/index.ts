@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import {AirinoneApplication, ApplicationConfig} from './application';
+=======
+import {ApplicationConfig, AirinoneApplication} from './application';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 export * from './application';
 
 export async function main(options: ApplicationConfig = {}) {
   const app = new AirinoneApplication(options);
   await app.boot();
+<<<<<<< HEAD
   //await app.migrateSchema();
+=======
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   await app.start();
 
   const url = app.restServer.url;

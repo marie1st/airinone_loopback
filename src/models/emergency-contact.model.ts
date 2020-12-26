@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {Employee} from './employee.model';
+=======
+import {Entity, model, property} from '@loopback/repository';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class EmergencyContact extends Entity {
@@ -28,6 +32,7 @@ export class EmergencyContact extends Entity {
   relationship: string;
 
   @property({
+<<<<<<< HEAD
     type: 'number',
     id: true,
     generated: true,
@@ -41,6 +46,13 @@ export class EmergencyContact extends Entity {
     type: 'string',
   })
   employeeId?: string;
+=======
+    type: 'string',
+    required: true,
+  })
+  employee_id: string;
+
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<EmergencyContact>) {
     super(data);

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {Customer} from './customer.model';
+=======
+import {Entity, model, property} from '@loopback/repository';
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
 @model()
 export class OrderProduct extends Entity {
@@ -46,6 +50,16 @@ export class OrderProduct extends Entity {
     required: true,
   })
   model: string;
+<<<<<<< HEAD
+=======
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  order_by: string;
+
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
   @property({
     type: 'date',
     required: true,
@@ -87,9 +101,12 @@ export class OrderProduct extends Entity {
   })
   created_at?: string;
 
+<<<<<<< HEAD
   @belongsTo(() => Customer, {name: 'id'})
   order_by: string;
 
+=======
+>>>>>>> e5cf0a7b95fe9f0f1bd516902c409a58f7a5ebbe
 
   constructor(data?: Partial<OrderProduct>) {
     super(data);
